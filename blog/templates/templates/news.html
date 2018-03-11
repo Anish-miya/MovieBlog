@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1><font color="white">New Movie</font></h1>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="tab-content">
+
+                <p>Main Content Here</p>
+                {% for content in data %}
+                        <h5>{{ content.content }}</h5>
+                {% endfor %}
+
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+
+                <li>
+                    <a data-toggle="pill" href="#">Article Name</a>
+                   {% for title in data %}
+                      {{ title.titlee }}
+                   {% endfor %}
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+{% endblock %}
